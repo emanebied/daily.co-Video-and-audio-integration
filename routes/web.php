@@ -15,13 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', [DailyCoController::class, 'createRoom']);
-//Route::get('/join-room/{name}', [DailyCoController::class, 'joinRoom']);
-
-
 Route::get('/', [DailyCoController::class, 'createRoom']);
-Route::get('/join-room/{name}/{grade}', [DailyCoController::class, 'joinRoom'])
-    ->middleware('check.grade:grade');
+Route::get('/join-room/{name}', [DailyCoController::class, 'joinRoom']);
+
+
+
 
 
 
